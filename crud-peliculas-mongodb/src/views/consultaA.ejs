@@ -1,0 +1,37 @@
+<% include partials/_header %>
+<div class="container-fluid">
+        <div class="row">
+                <!--FORM-->
+                <div class="col-md-9 offset-md-1">
+                          <table class="table table-bordered table-hover">
+                              <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Genero</th>
+                                    <th>Fraquicia</th>
+                                    <th>Pais</th>
+                                    <th>Año</th>
+                                    <th>Duración</th>
+                                    <th>Compañia</th>
+                                    <th>Actores</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                      <tr>
+                                      <td><strong><%= consultaA[0].nombre %></strong></td>
+                                      <td><%= consultaA[0].genero %></td>
+                                      <td><%= consultaA[0].franquicia %></td>
+                                      <td><%= consultaA[0].pais %></td>
+                                      <td><%= consultaA[0].anio %></td>
+                                      <td><%= consultaA[0].duracion %></td>
+                                      <td><%= consultaA[0].compania %></td>
+                                      <td><%= consultaA[0].actores %></td>
+                                      </tr>
+                              </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+        
+</div>
+<% include partials/_footer %>

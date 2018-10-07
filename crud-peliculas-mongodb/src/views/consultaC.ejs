@@ -1,0 +1,41 @@
+<% include partials/_header %>
+<div class="container-fluid">
+        <div class="row">
+                <!--FORM-->
+                <div class="col-md-9 offset-md-1">
+                          <table class="table table-bordered table-hover">
+                              <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Nombre</th>
+                                    <th>Genero</th>
+                                    <th>Fraquicia</th>
+                                    <th>Pais</th>
+                                    <th>Año</th>
+                                    <th>Duración</th>
+                                    <th>Compañia</th>
+                                    <th>Actores</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <% for(var i=0; i < consultaC.length; i++) { %>
+                                    <tr>
+                                        <td><%= i + 1%></td>
+                                        <td><strong><%= consultaC[i].nombre %></strong></td>
+                                        <td><%= consultaC[i].genero %></td>
+                                        <td><%= consultaC[i].franquicia %></td>
+                                        <td><%= consultaC[i].pais %></td>
+                                        <td><%= consultaC[i].anio %></td>
+                                        <td><%= consultaC[i].duracion %></td>
+                                        <td><%= consultaC[i].compania %></td>
+                                        <td><%= consultaC[i].actores %></td>
+                                    </tr>
+                                <% } %>
+                              </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+        
+</div>
+<% include partials/_footer %>

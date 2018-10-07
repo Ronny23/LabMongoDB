@@ -1,0 +1,35 @@
+<% include partials/_header %>
+
+<div class="container-fluid">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <form action="/compania/edit/<%= companias._id %>" method="post">
+            <div class="form-group">
+                    <a href="/compania" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Volver</a>
+            </div>
+            <div class="form-group">
+                    <label for="nombre">Nombre de la compañia</label>
+                    <input class="form-control border-primary" type="text" name="nombre" value="<%= companias.nombre %>">
+            </div>
+            <div class="form-group">
+                    <label for="anio">Año de fundación</label>
+                    <input class="form-control border-primary" type="number" name="anio" value="<%= companias.anio %>">
+            </div>
+            <div class="form-group">
+                    <label for="compania">Dirección del sitio web oficial</label>
+                    <input class="form-control border-primary" type="text" name="web" value="<%= companias.web %>">
+            </div>
+            <button class="btn btn-info btn-block" type="submit">
+                  Actualizar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer%>

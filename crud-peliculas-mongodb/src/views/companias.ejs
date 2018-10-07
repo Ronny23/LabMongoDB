@@ -1,0 +1,67 @@
+<% include partials/_header %>
+
+<div class="container-fluid">    
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body border border-secondary">
+          <form action="/compania/add" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre de la compañia</label>
+                <input class="form-control border-primary" type="text" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="anio">Año de fundación</label>
+                <input class="form-control border-primary" type="number" name="anio">
+            </div>
+            <div class="form-group">
+                <label for="compania">Dirección del sitio web oficial</label>
+                <input class="form-control border-primary" type="text" name="web">
+            </div>
+            <button class="btn btn-info btn-block" type="submit">
+              Agregar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- LIST -->
+    <div class="col-md-7 ">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Nombre</th>
+            <th>Año</th>
+            <th>Sitio Web</th>
+            <th>Operaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i < companias.length; i++) { %>
+              <tr>
+                <td><%= i + 1%></td>
+                <td><strong><%= companias[i].nombre %></strong></td>
+                <td><%= companias[i].anio %></td>
+                <td><%= companias[i].web %></td>
+                <td>
+                  <a href="/compania/delete/<%= companias[i]._id %>" class="btn btn-danger">
+                      Borrar
+                  </a>
+                  <a href="/compania/edit/<%= companias[i]._id %>" class="btn btn-info">
+                    Editar
+                  </a>
+                </td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+
+<% include partials/_footer%>

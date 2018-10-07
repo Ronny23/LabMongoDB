@@ -1,0 +1,90 @@
+<% include partials/_header %>
+
+<div class="container-fluid">    
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body border border-secondary">
+          <form action="/add" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre de la pelicula</label>
+                <input class="form-control border-primary" type="text" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="genero">Genero de la pelicula</label>
+                <input class="form-control border-primary" type="text" name="genero">
+            </div>
+            <div class="form-group">
+                <label for="franquicia">Franquicia</label>
+                <input class="form-control border-primary" type="text" name="franquicia">
+            </div>
+            <div class="form-group">
+                <label for="pais">Pais de produción</label>
+                <input class="form-control border-primary" type="text" name="pais">
+            </div>
+            <div class="form-group">
+                <label for="anio">Año de estreno</label>
+                <input class="form-control border-primary" type="number" name="anio">
+            </div>
+            <div class="form-group">
+                <label for="duracion">Duración en minutos</label>
+                <input class="form-control border-primary" type="number" name="duracion">
+            </div>
+            <div class="form-group">
+                <label for="compania">Compañia productora</label>
+                <input class="form-control border-primary" type="text" name="compania">
+            </div>
+            <div class="form-group">
+                <label for="actores">Actores</label>
+                <textarea class="form-control border-primary" name="actores" cols="80"></textarea>
+            </div>
+
+            <button class="btn btn-info btn-block" type="submit">
+              Agregar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- LIST -->
+    <div class="col-md-7 ">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Duración</th>
+            <th>Compañia</th>
+            <th>Operaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i < peliculas.length; i++) { %>
+              <tr>
+                <td><%= i + 1%></td>
+                <td><strong><%= peliculas[i].nombre %></strong></td>
+                <td><%= peliculas[i].genero %></td>
+                <td><%= peliculas[i].duracion %></td>
+                <td><%= peliculas[i].compania %></td>
+                <td>
+                  <a href="/delete/<%= peliculas[i]._id %>" class="btn btn-danger">
+                      Borrar
+                  </a>
+                  <a href="/edit/<%= peliculas[i]._id %>" class="btn btn-info">
+                    Editar
+                  </a>
+                </td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+
+<% include partials/_footer%>

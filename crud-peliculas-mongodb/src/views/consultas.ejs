@@ -1,0 +1,48 @@
+<% include partials/_header %>
+
+<div class="container-fluid">    
+    <div class="row">
+    <!--FORM-->
+        <div class="col-md-5">
+        <div class="card">
+            <div class="card-body border border-secondary">
+                <form action="/consultaA" method="post">
+                    <div class="form-group">
+                        <label for="consultaA">Información de la película con un título en particular</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control border-primary" type="text" placeholder="Titulo" name="nombre">
+                    </div>
+                    <button class="btn btn-info btn-block" type="submit">
+                        Consultar 
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="card">
+            <div class="card-body border border-secondary">
+                <form action="/consultaC" method="post">
+                    <div class="form-group">
+                        <label for="consultaA">Información de las películas estrenadas en un rango de años específico</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control border-primary" type="number" placeholder="Primer rango" name="primerRango">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control border-primary" type="number" placeholder="Segundo rango" name="segundoRango">
+                    </div>
+                    <button class="btn btn-info btn-block" type="submit">
+                        Consultar 
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+<% include partials/_footer %>
