@@ -1,0 +1,38 @@
+<% include partials/_header %>
+<div class="container-fluid">
+    <div class="col-md-10 offset-md-1">
+        <div class="card">
+                <div class="card-body border border-secondary">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="cantidadP">Cantidad de peliculas</label>
+                            <input class="form-control border-primary" type="number" name="cantPeliculas" value="<%= consultaEuno.length %>">
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <label for="duracionP">La película con la menor duración</label>
+                            <input class="form-control border-primary" type="text" name="nombrePelicula" value="<%= minResult[0].nombre %>" >
+                                 
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <label for="duracionP">La película con la mayor duración</label>
+                            <input class="form-control border-primary" type="text" name="nombrePelicula" value="<%= maxResult[0].nombre %>" >
+                          
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                                <label for="duracionP">La duración promedio </label>
+                                <input class="form-control border-primary" type="text" name="nombrePelicula" value="<%= valAvg %>" >
+                     
+                        </div>
+                        <br/>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+</div>
+<% include partials/_footer %>

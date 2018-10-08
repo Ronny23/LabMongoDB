@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connection to db
-mongoose.connect('mongodb://localhost/crud-peliculas', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/LabMongoDBpeliculas', { useNewUrlParser: true })
   .then(db => console.log('db connected'))
   .catch(err => console.log(err));
 

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const PeliculasSchema = Schema({
   nombre: String,
   genero: String,
-  franquicia: Boolean,
+  franquicia: String,
   pais: String,
   anio: Number,
   duracion: Number,

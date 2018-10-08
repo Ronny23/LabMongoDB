@@ -1,18 +1,19 @@
 <% include partials/_header %>
 
 <div class="container-fluid">    
-    <div class="row">
+    <div class="row mb-4">
     <!--FORM-->
-        <div class="col-md-5">
+        <div class="col-md-6">
         <div class="card">
             <div class="card-body border border-secondary">
                 <form action="/consultaA" method="post">
                     <div class="form-group">
-                        <label for="consultaA">Información de la película con un título en particular</label>
+                        <label for="consultaA">Consultar toda la información de la película con un título en particular</label>
                     </div>
                     <div class="form-group">
                         <input class="form-control border-primary" type="text" placeholder="Titulo" name="nombre">
                     </div>
+                    <br/>
                     <button class="btn btn-info btn-block" type="submit">
                         Consultar 
                     </button>
@@ -20,29 +21,91 @@
             </div>
         </div>
     </div>
-
-    <div class="col-md-7">
-        <div class="card">
-            <div class="card-body border border-secondary">
-                <form action="/consultaC" method="post">
-                    <div class="form-group">
-                        <label for="consultaA">Información de las películas estrenadas en un rango de años específico</label>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control border-primary" type="number" placeholder="Primer rango" name="primerRango">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control border-primary" type="number" placeholder="Segundo rango" name="segundoRango">
-                    </div>
-                    <button class="btn btn-info btn-block" type="submit">
-                        Consultar 
-                    </button>
-                </form>
+    <div class="col-md-6">
+            <div class="card">
+                <div class="card-body border border-secondary">
+                    <form action="/consultaB" method="post">
+                        <div class="form-group">
+                            <label for="consultaB">Consultar toda la información de las películas de una franquicia en particular</label>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control border-primary" type="text" placeholder="Franquicia" name="franquicia">
+                        </div>
+                        <br/>
+                        <button class="btn btn-info btn-block" type="submit">
+                            Consultar 
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-
   </div>
+  <div class="row mb-4">
+        <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body border border-secondary">
+                        <form action="/consultaC" method="post">
+                            <div class="form-group">
+                                <label for="consultaA">Consultar toda la información de las películas estrenadas en un rango de años específico</label>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control border-primary" type="number" placeholder="Primer rango" name="primerRango">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control border-primary" type="number" placeholder="Segundo rango" name="segundoRango">
+                            </div>
+                            <button class="btn btn-info btn-block" type="submit">
+                                Consultar 
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    <div class="col-md-6">
+            <div class="card">
+                <div class="card-body border border-secondary">
+                    <form action="/consultaD" method="post">
+                        <div class="form-group">
+                            <label for="consultaD">Consultar la información  de todas las películas producidas por una compañía productora en particular</label>
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <input class="form-control border-primary" type="text" placeholder="Compañia productora" name="productora">
+                        </div>
+                        <br/>
+                        <button class="btn btn-info btn-block" type="submit">
+                            Consultar 
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-mb-4">
+            <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-body border border-secondary">
+                            <form action="/consultaE" method="post">
+                                <div class="form-group">
+                                    <label for="consultaE">Consultar la cantidad de películas, la película con la menor duración,
+                                            la película con la mayor duración y la duración promedio de las
+                                            películas producidas por una compañía productora en particular
+                                            </label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control border-primary" type="text" placeholder="Compañia productora" name="productora">
+                                </div>
+                                <button class="btn btn-info btn-block" type="submit">
+                                    Consultar 
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+        
 </div>
 
 <% include partials/_footer %>
